@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+ 
+ <form method="POST">
+    {% csrf_token %}
+    {{ form_data.as_p}}
+    <button  type="submit" class="btn btn-secondary">Add task</button>
+    <a href="{% url 'Todolist'  %}" class="btn btn-danger">To do list</a>
+ </form>
+{% endblock %}
